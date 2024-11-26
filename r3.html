@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+</head>
+<body>
+    <script>
+        var value = prompt("请输入一个整数：(范围为0～100)");
+        if(Number(value)>100 || (Number(value)<0)){
+            alert("请重新输入");
+        }else if(Number(value)>=90){
+            alert(Number(value)+"等级为A");
+        }else if(Number(value)>=80){
+            alert(Number(value)+"等级为B");
+        }else if(Number(value)>=70){
+            alert(Number(value)+"等级为C");
+        }else if(Number(value)>=60){
+            alert(Number(value)+"等级为D");
+        }else {
+            alert(Number(value)+"等级为E");
+        }
+    </script>
+</body>
+</html>
