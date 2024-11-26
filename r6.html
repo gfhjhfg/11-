@@ -4,10 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>6</title>
+    <style>
+        a {
+            display: block;
+            width: 80%;
+            height: 300px;
+            margin: 10px auto;
+            background-color: skyblue;
+            color: black;
+            text-decoration: none;
+            text-align: center;
+            font-size: 100px;
+        }
+    </style>
 </head>
 <body>
+    <a href="./index.html">点击此区域回主页面</a>
+    <!-- 使用 prompt 输入一个整数 n，查找并打印出小于等于 n 的所有素数。 -->
     <script>
-        var y = prompt("请输入一个年份：");
+        var value = prompt("请输入一个整数：");
+        value=Number(value);
+        // for(var i=2;i<=value;i++){
+        //     for(var j=2;j<=i;j++){
+        //     if(i%j!=0){
+        //         console.log(i)
+        //     }
+        // }
+        // }
+        for(var a=2;a<value;a++){
+            for (var i=2;i<value;i++){
+            if(a%i==0){
+                // console.log(value)
+                console.log(a+"不是素数")
+                break;
+            }else {
+                console.log(a+"是素数");
+            }
+        }
+        }
+        
     </script>
 </body>
 </html>

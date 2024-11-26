@@ -6,6 +6,21 @@
     <title>8</title>
 </head>
 <body>
-    s
+    <script>
+        let random=Math.floor(Math.random()*101);
+        var value =prompt("请输入一个你猜的数");
+        for(var i=1;i<100;i++){
+            if(random==value){
+            alert("猜中了")
+            break;
+            }else if(value>random){
+                alert("猜大了")
+                continue;
+            }else{
+                alert("猜小了")
+                continue;
+            }
+        }
+    </script>
 </body>
 </html>
