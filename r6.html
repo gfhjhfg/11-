@@ -31,16 +31,19 @@
         //     }
         // }
         // }
-        for(var a=2;a<value;a++){
-            for (var i=2;i<value;i++){
-            if(a%i==0){
-                // console.log(value)
-                console.log(a+"不是素数")
-                break;
-            }else {
-                console.log(a+"是素数");
+        for(var x=2;x<=value;x++){
+            var is=0;
+            for (var i=2;i<x;i++){
+                if(x%i==0){
+                    // console.log(value)
+                    // console.log(x+"不是素数")
+                    is=1;
+                    break;
+                }
             }
-        }
+            if(is==0){
+                console.log(x+"是素数")
+            }
         }
         
     </script>
