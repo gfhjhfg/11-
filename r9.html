@@ -4,8 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>9</title>
+    <style>
+        a {
+            display: block;
+            width: 80%;
+            height: 300px;
+            margin: 10px auto;
+            background-color: skyblue;
+            color: black;
+            text-decoration: none;
+            text-align: center;
+            font-size: 100px;
+        }
+    </style>
 </head>
 <body>
-    s
+    <a href="./index.html">点击此区域回主页面</a>
+    <script>
+        var randomNumber = Math.floor(Math.random() * 100) + 1;
+        var guessing = true;
+        var userGuess = Number(prompt("请输入一个1到100之间的数字："));
+        while (guessing) {
+            var newGuess = Number(prompt("你的猜测 " + userGuess + " " + (userGuess > randomNumber ? "大了" : "小了") + "，请再试一次："));
+            userGuess = newGuess;
+            if (userGuess === randomNumber) {
+                alert("猜对了！数字是 " + randomNumber + "。");
+                continueGuessing = false; 
+                break;
+            } else if (userGuess > randomNumber) {
+                alert("猜大了！");
+            } else {
+                alert("猜小了！");
+            }
+        }
+    </script>    
 </body>
 </html>

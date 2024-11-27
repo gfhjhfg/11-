@@ -4,8 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>11</title>
+    <style>
+        a {
+            display: block;
+            width: 80%;
+            height: 300px;
+            margin: 10px auto;
+            background-color: skyblue;
+            color: black;
+            text-decoration: none;
+            text-align: center;
+            font-size: 100px;
+        }
+    </style>
 </head>
 <body>
-    s
+    <a href="./index.html">点击此区域回主页面</a>
+    <!-- 11. 使用 prompt 输入一个整数 n，检查并输出它是否是完数
+     （一个数恰好等于它的所有真因子之和，如 6 = 1 + 2 + 3）。 -->
+     <script>
+        var value = Number(prompt("请输入一个整数："));
+        var sum = 0;
+        for (var i = 1; i <= value / 2; i++) {
+            if (value % i == 0) {
+                sum += i;
+            }
+        }
+        if (sum == value) {
+            alert(value + " 是一个完数。");
+        } else {
+            alert(value + " 不是一个完数。");
+        }
+    </script>
 </body>
 </html>

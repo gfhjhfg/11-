@@ -4,8 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>10</title>
+    <style>
+        a {
+            display: block;
+            width: 80%;
+            height: 300px;
+            margin: 10px auto;
+            background-color: skyblue;
+            color: black;
+            text-decoration: none;
+            text-align: center;
+            font-size: 100px;
+        }
+    </style>
 </head>
 <body>
-    s
+    <a href="./index.html">点击此区域回主页面</a>
+    <!-- 10. 使用 prompt 输入若干学生的成绩（输入 0 表示结束输入），
+     计算并输出平均分、最高分和最低分。 -->
+    <script>
+        var scores = [];
+        var scoreInput;
+        while (true) {
+            var score = Number(scoreInput = prompt("请输入学生的成绩（输入0表示结束）："));
+            if (score === 0 || isNaN(score)) {
+                break;
+            }
+            scores.push(score);
+        }
+        if (scores.length === 0) {
+            alert("未输入任何有效成绩。");
+        } else {
+            var averageScore = scores.reduce((sum, score) => sum + score, 0) / scores.length;
+            var maxScore = Math.max(...scores);
+            var minScore = Math.min(...scores);
+            alert("平均分：" + averageScore.toFixed(2) + "\n最高分：" + maxScore + "\n最低分：" + minScore);
+        }
+    </script>
 </body>
 </html>

@@ -4,8 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>7</title>
+    <style>
+        a {
+            display: block;
+            width: 80%;
+            height: 300px;
+            margin: 10px auto;
+            background-color: skyblue;
+            color: black;
+            text-decoration: none;
+            text-align: center;
+            font-size: 100px;
+        }
+    </style>
 </head>
 <body>
-    s
+    <a href="./index.html">点击此区域回主页面</a>
+    <!-- 7. 使用 prompt 输入一个整数 n 使用循环打印出
+     前 n 个斐波那契数列的数字。 -->
+    <script>
+        var v=prompt("输入一个整数");
+        v=Number(v);
+        var a=1,b=1,c=0,s='';
+        for( var i=1;i<=v;i++){
+            if(i==1){
+                s=a;
+                //  console.log(s);     
+            }
+            if(i==2){
+                s=a+","+b;
+                //  console.log(s);
+            }
+            if(i>2){
+                c=a;
+                a=b;
+                b=c+b;
+                // console.log(s);
+                // s=s+a+","+a+","+b;
+                s=s+','+b;
+            }
+        }
+        console.log(v+'个斐波那契数列为：'+s);
+    </script>
 </body>
 </html>

@@ -4,23 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>8</title>
+    <style>
+        a {
+            display: block;
+            width: 80%;
+            height: 300px;
+            margin: 10px auto;
+            background-color: skyblue;
+            color: black;
+            text-decoration: none;
+            text-align: center;
+            font-size: 100px;
+        }
+    </style>
 </head>
 <body>
+    <a href="./index.html">点击此区域回主页面</a>
+    <!-- 8. 使用 prompt 输入一个字符串，使用循环将其反转并 alert 输出。 -->
     <script>
-        let random=Math.floor(Math.random()*101);
-        var value =prompt("请输入一个你猜的数");
-        for(var i=1;i<100;i++){
-            if(random==value){
-            alert("猜中了")
-            break;
-            }else if(value>random){
-                alert("猜大了")
-                continue;
-            }else{
-                alert("猜小了")
-                continue;
-            }
+        var str = prompt("请输入一串字符");
+        var newstr ='';
+        for (var i = str.length - 1; i >= 0; i--) {
+            newstr += str[i];
         }
+        alert(str+'反转之后为'+newstr);
     </script>
 </body>
 </html>
